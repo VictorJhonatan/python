@@ -47,5 +47,30 @@ print( "nombre" in dictionary)
 my_new_dict = dictionary.fromkeys(("Nombre", "edad"))
 print(my_new_dict)
 
+
+
 my_new_dict["Nombre"] = "Jose"
+my_new_dict["edad"] = 20
+my_new_dict["ciudad"] = "Madrid"
 print(my_new_dict)
+
+
+""" dic. es una lista generica nada mas palabra reservada el dic.
+my_new_dict = dict.fromkeys(("Nombre", "edad"))
+print(my_new_dict)
+"""
+my_list = ["Nombre", "edad", "ciudad"] # lista con elementos
+my_new_dict2 = dict.fromkeys((my_list)) # crear diccionario a partir de una lista
+print(my_new_dict2)
+
+# crear diccionario a partir de otro diccionario
+my_new_dict3 = dict.fromkeys(dictionary1)
+print(my_new_dict3)
+
+my_new_dict4 = dict.fromkeys(dictionary1, "Victor") # asignar un mismo valor a todas las claves  
+print(my_new_dict4)
+
+print(list(my_new_dict4)) # las claves del diccionario como una lista
+print(tuple(my_new_dict4)) # las claves del diccionario como una tupla
+print(set(my_new_dict4)) # las claves del diccionario como un set
+print(dict(my_new_dict4)) # el diccionario mismo
